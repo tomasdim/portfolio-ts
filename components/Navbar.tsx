@@ -1,6 +1,7 @@
 /* This example requires Tailwind CSS v2.0+ */
-import { Fragment } from 'react';
-import { Disclosure, Menu, Transition } from '@headlessui/react';
+import Link from 'next/link';
+import { CloseIcon, IconGithub, LinkedInIcon, MenuIcon } from './icons';
+import { useState } from 'react';
 
 const navigation = [
   { name: 'Homepage', href: '#', current: true },
@@ -15,99 +16,126 @@ function classNames(...classes: string[]) {
 }
 
 export default function Example() {
+  const [openNav, setOpenNav] = useState(false);
+  const handleNav = () => {
+    setOpenNav(!openNav);
+  };
   return (
-    <Disclosure as='nav' className='bg-white bg-opacity-25'>
-      {({ open }) => (
-        <>
-          <div className='max-w-7xl mx-auto px-2 sm:px-6 lg:px-8'>
-            <div className='relative flex items-center justify-between h-16'>
-              <div className='absolute inset-y-0 left-0 flex items-center md:hidden'>
-                {/* Mobile menu button*/}
-                <Disclosure.Button className='inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white'>
-                  <span className='sr-only'>Open main menu</span>
-                  {open ? (
-                    <div className='block h-6 w-6' aria-hidden='true'>
-                      X
-                    </div>
-                  ) : (
-                    <div className='block h-6 w-6' aria-hidden='true'>
-                      MENU
-                    </div>
-                  )}
-                </Disclosure.Button>
+    <div className='fixed w-full h-20 shadow-xl z-20'>
+      <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
+        <div className='flex items-center justify-center'>
+          <img className='h-10' src='/img/logotdlong.png'></img>
+        </div>
+        <ul className='hidden md:flex'>
+          <Link href='/'>
+            <li className='ml-10 text-teal text-sm uppercase hover:border-b '>
+              Home
+            </li>
+          </Link>
+          <Link href='/'>
+            <li className='ml-10 text-teal text-sm uppercase hover:border-b '>
+              About
+            </li>
+          </Link>
+          <Link href='/'>
+            <li className='ml-10 text-teal text-sm uppercase hover:border-b '>
+              Skills
+            </li>
+          </Link>
+          <Link href='/'>
+            <li className='ml-10 text-teal text-sm uppercase hover:border-b '>
+              Project
+            </li>
+          </Link>
+          <Link href='/'>
+            <li className='ml-10 text-teal text-sm uppercase hover:border-b '>
+              Contact
+            </li>
+          </Link>
+        </ul>
+        <div onClick={handleNav} className='md:hidden'>
+          <MenuIcon />
+        </div>
+      </div>
+      {/* //SideMenu */}
+      <div
+        className={
+          openNav
+            ? 'md:hidden fixed left-0 top-0 w-full h-screen bg-black/70'
+            : ''
+        }
+      >
+        <div
+          onClick={handleNav}
+          className={
+            openNav
+              ? 'fixed left-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#1d1d1d] p-10 ease-in duration-500'
+              : 'fixed left-[-100%] top-0 p-10 ease-in duration-500'
+          }
+        >
+          <div>
+            <div className='flex w-full items-center justify-between'>
+              <img
+                className='w-[150px] mr-5  sm:h-10 sm:w-auto'
+                src='/img/logotdlong.png'
+              ></img>
+              <div
+                onClick={handleNav}
+                className='rounded-full shadow-lg shadow-pink-600 p-3 cursor-pointer'
+              >
+                <CloseIcon />
               </div>
-              <div className='flex-1 flex items-center justify-center sm:items-stretch sm:justify-start'>
-                <div className='justify-center flex items-center'>
-                  <img
-                    className='block lg:hidden h-8 w-auto'
-                    src='/img/logotd.png'
-                    alt='Logo TD'
-                  />
-                  <div className='flex items-center justify-center gap-2'>
-                    <img
-                      className='hidden lg:block h-8 w-auto'
-                      src='/img/logotd.png'
-                      alt='Logo TD'
-                    />
-                    <h1 className='hidden md:flex text-lg ml-4 lg:ml-0'>
-                      Tomás Di Maria
-                    </h1>
-                  </div>
+            </div>
+            <div className='my-4'>
+              <p className='text-white '>
+                Let's build something legendary together!
+              </p>
+            </div>
+          </div>
+          <div className='py-4 flex flex-col'>
+            <ul className='flex-col uppercase'>
+              <Link href='/'>
+                <li className='mb-3 text-white py-4 text-sm hover:text-teal hover:text-lg ease-in duration-500 cursor-pointer'>
+                  Home
+                </li>
+              </Link>
+              <Link href='/'>
+                <li className='mb-3 text-white py-4 text-sm hover:text-teal hover:text-lg ease-in duration-500 cursor-pointer'>
+                  About
+                </li>
+              </Link>
+              <Link href='/'>
+                <li className='mb-3 text-white py-4 text-sm hover:text-teal hover:text-lg ease-in duration-500 cursor-pointer'>
+                  Skills
+                </li>
+              </Link>
+              <Link href='/'>
+                <li className='mb-3 text-white py-4 text-sm hover:text-teal hover:text-lg ease-in duration-500 cursor-pointer'>
+                  Project
+                </li>
+              </Link>
+              <Link href='/'>
+                <li className='mb-3 text-white py-4 text-sm hover:text-teal hover:text-lg ease-in duration-500 cursor-pointer'>
+                  Contact
+                </li>
+              </Link>
+            </ul>
+            <div className='absolute bottom-10'>
+              <p className='uppercase -tracking-wider text-white'>
+                Let's connect
+              </p>
+              <div className='flex items-center gap-10 my-4 w-full sm:w-[80%]'>
+                <div className='rounded-full shadow-lg shadow-teal p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
+                  <LinkedInIcon />
                 </div>
-                <div className='hidden md:block sm:ml-6'>
-                  <div className='flex space-x-4'>
-                    {navigation.map((item) => (
-                      <a
-                        key={item.name}
-                        href={item.href}
-                        className={classNames(
-                          item.current ? 'text-gray-600' : 'text-gray-500',
-                          'px-3 py-2 rounded-md text-sm font-medium'
-                        )}
-                        aria-current={item.current ? 'page' : undefined}
-                      >
-                        {item.name}
-                      </a>
-                    ))}
-                  </div>
+                <div className='rounded-full shadow-lg shadow-teal p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
+                  <IconGithub />
                 </div>
-              </div>
-              <div className='absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0'>
-                <button
-                  type='button'
-                  className=' p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white'
-                >
-                  <span className='sr-only'>View notifications</span>
-                  <div className='h-6 w-6' aria-hidden='true'>
-                    <img src='/img/moon.png' />
-                  </div>
-                </button>
               </div>
             </div>
           </div>
-
-          <Disclosure.Panel className='sm:hidden'>
-            <div className='px-2 pt-2 pb-3 space-y-1'>
-              {navigation.map((item) => (
-                <Disclosure.Button
-                  key={item.name}
-                  as='a'
-                  href={item.href}
-                  className={classNames(
-                    item.current
-                      ? 'bg-gray-900 text-white'
-                      : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                    'block px-3 py-2 rounded-md text-base font-medium'
-                  )}
-                  aria-current={item.current ? 'page' : undefined}
-                >
-                  {item.name}
-                </Disclosure.Button>
-              ))}
-            </div>
-          </Disclosure.Panel>
-        </>
-      )}
-    </Disclosure>
+        </div>
+      </div>
+    </div>
   );
 }

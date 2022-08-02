@@ -10,7 +10,7 @@ class MyDocument extends Document {
             rel='stylesheet'
           />
         </Head>
-        <body className='font-nunito'>
+        <body className='font-nunito bg-[#1d1d1d]'>
           <Main />
           <NextScript />
         </body>

@@ -6,6 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        teal: '#08fdd8',
+      },
       screens: {},
     },
     fontFamily: {
