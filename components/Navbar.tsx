@@ -28,27 +28,27 @@ export default function Example() {
         </div>
         <ul className='hidden md:flex'>
           <Link href='/'>
-            <li className='ml-10 text-teal text-sm uppercase hover:border-b '>
+            <li className='ml-10 text-white hover:text-teal text-sm  ease-in duration-500 cursor-pointer uppercase '>
               Home
             </li>
           </Link>
           <Link href='/'>
-            <li className='ml-10 text-teal text-sm uppercase hover:border-b '>
+            <li className='ml-10 text-white hover:text-teal text-sm  ease-in duration-500 cursor-pointer uppercase  '>
               About
             </li>
           </Link>
           <Link href='/'>
-            <li className='ml-10 text-teal text-sm uppercase hover:border-b '>
+            <li className='ml-10 text-white hover:text-teal text-sm  ease-in duration-500 cursor-pointer uppercase  '>
               Skills
             </li>
           </Link>
           <Link href='/'>
-            <li className='ml-10 text-teal text-sm uppercase hover:border-b '>
+            <li className='ml-10 text-white hover:text-teal text-sm  ease-in duration-500 cursor-pointer uppercase  '>
               Project
             </li>
           </Link>
           <Link href='/'>
-            <li className='ml-10 text-teal text-sm uppercase hover:border-b '>
+            <li className='ml-10 text-white hover:text-teal  ease-in duration-500 cursor-pointer text-sm uppercase  '>
               Contact
             </li>
           </Link>
@@ -120,7 +120,7 @@ export default function Example() {
                 </li>
               </Link>
             </ul>
-            <div className='absolute bottom-10'>
+            <div className='absolute bottom-5'>
               <p className='uppercase -tracking-wider text-white'>
                 Let's connect
               </p>
