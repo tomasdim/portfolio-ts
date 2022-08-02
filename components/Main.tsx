@@ -35,10 +35,10 @@ const Main = () => {
             Let's make something special
           </p>
           <div className='flex items-center justify-between max-w-xs md:max-w-sm  m-auto py-4'>
-            <div className='rounded-full shadow-lg shadow-pink-600 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
+            <div className='rounded-full shadow shadow-pink-600 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
               <LinkedInIcon />
             </div>
-            <div className='rounded-full shadow-lg shadow-pink-600 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
+            <div className='rounded-full shadow shadow-pink-600 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
               <IconGithub />
             </div>
           </div>
