@@ -67,3 +67,58 @@
     transform: scale3d(1, 1, 1);
   }
 }
+
+.form-style {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0)
+    ),
+    linear-gradient(#08fdd8, #08fdd8);
+  background-size: 100% 2px, 0 2px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s linear;
+}
+
+.form-style:focus {
+  background-size: 0 2px, 100% 2px;
+}
+
+.sendmessage {
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 2px solid #08fdd8;
+  background: linear-gradient(45deg, #1d1d1d 50%, #08fdd8 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+
+  color: #1d1d1d; /*For IE*/
+}
+
+.sendmessage:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(45deg, #08fdd8 50%, transparent 50%);
+  z-index: -1;
+}
+
+.sendmessage,
+.sendmessage:after {
+  background-size: 300%;
+  background-position: 100%;
+  transition: 1s, font-size 0.2s;
+}
+
+.sendmessage:hover,
+.sendmessage:hover:after {
+  background-position: 0;
+  font-size: 1.1em;
+
+  color: #08fdd8; /*For IE*/
+}

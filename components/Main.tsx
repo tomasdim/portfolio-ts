@@ -25,14 +25,14 @@ const Main = () => {
           </h1>
           <div className='max-w-2xl py-4'>
             <p className='text-md text-white'>
-              I'm a Web Developer located in Argentina. I have a serious passion
-              for creating intuitive, dynamic and enjoyable user experiences.
-              Well organised person, problem solver, logic thinker. Interested
-              in the whole Front adn Back End spectrum.
+              I&apos;m a Web Developer located in Argentina. I have a serious
+              passion for creating intuitive, dynamic and enjoyable user
+              experiences. Well organised person, problem solver, logic thinker.
+              Interested in the whole Front adn Back End spectrum.
             </p>
           </div>
           <p className='uppercase text-sm tracking-widest text-teal'>
-            Let's make something special
+            Let&apos;s make something special
           </p>
           <div className='flex items-center lg:mt-5 justify-between max-w-xs md:max-w-sm  m-auto py-4'>
             <div className='rounded-full shadow shadow-pink-600 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
