@@ -21,7 +21,7 @@ export default function Example() {
     setOpenNav(!openNav);
   };
   return (
-    <div className='fixed w-full h-20 shadow-xl z-20'>
+    <div className='fixed w-full h-20 shadow-xl z-20 bg-[#1d1d1d] bg-opacity-70'>
       <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
         <div className='flex items-center justify-center'>
           <img className='h-10' src='/img/logotdlong.png'></img>

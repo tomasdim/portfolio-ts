@@ -10,7 +10,7 @@ const Main = () => {
             <p className='text-white'>Hi</p>
             <div className='px-1'></div>
             <p className='text-teal jello-vertical'>I</p>
-            <p className='text-teal jello-vertical'>'</p>
+            <p className='text-teal jello-vertical'>&apos;</p>
             <p className='text-teal jello-vertical'>m </p>
             <div className='px-1'></div>
             <p className='text-teal jello-vertical'>T</p>
@@ -34,12 +34,12 @@ const Main = () => {
           <p className='uppercase text-sm tracking-widest text-teal'>
             Let's make something special
           </p>
-          <div className='flex items-center justify-between max-w-xs md:max-w-sm  m-auto py-4'>
+          <div className='flex items-center lg:mt-5 justify-between max-w-xs md:max-w-sm  m-auto py-4'>
             <div className='rounded-full shadow shadow-pink-600 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
               <LinkedInIcon />
             </div>
             <div className='rounded-full shadow shadow-pink-600 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-              <IconGithub />
+              <IconGithub className='text-white' />
             </div>
           </div>
         </div>

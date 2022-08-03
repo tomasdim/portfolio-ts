@@ -15,9 +15,11 @@ const skills = [
 
 const Skills = () => {
   return (
-    <div className='w-full p-2 '>
+    <div className='w-full p-2 pb-20'>
       <div className='max-w-[1240px] mx-auto flex flex-col h-full'>
-        <p className='text-xl tracking-widest uppercase text-white'>Skills</p>
+        <div className='flex text-xl tracking-widest uppercase text-white'>
+          <p className='text-teal mr-2'>01.</p>Skills
+        </div>
         <div className='grid md:grid-cols-2 lg:grid-cols-5 gap-8'>
           {skills.map((skill) => (
             <div

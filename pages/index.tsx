@@ -3,6 +3,8 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Main from '../components/Main';
 import Navbar from '../components/Navbar';
+import Projects from '../components/Projects';
+
 import Skills from '../components/Skills';
 import styles from '../styles/Home.module.css';
 
@@ -12,6 +14,7 @@ const Home: NextPage = () => {
       <Navbar />
       <Main />
       <Skills />
+      <Projects />
     </div>
   );
 };
