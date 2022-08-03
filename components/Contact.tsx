@@ -48,7 +48,7 @@ const Contact = () => {
     <div>
       <div className='max-w-[1240px] mx-auto flex'>
         <div className='flex text-xl tracking-widest uppercase text-white'>
-          <p className='text-teal mr-2'>03.</p>What's Next?
+          <p className='text-teal mr-2'>03.</p>What&apos;s Next?
         </div>
       </div>
       <div className='flex items-center justify-center text-center w-full p-2 pb-20'>

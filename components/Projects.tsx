@@ -44,7 +44,9 @@ const Projects = () => {
                   </div>
                   <div className='flex text-left text-gray-300 my-2'>
                     {project.tags.map((tag) => (
-                      <h1 className='px-2 text-pink-600 '>{tag}</h1>
+                      <h1 key={tag} className='px-2 text-pink-600 '>
+                        {tag}
+                      </h1>
                     ))}
                   </div>
                   <div className='flex   text-white'>
@@ -104,7 +106,9 @@ const Projects = () => {
                   </div>
                   <div className='flex text-right justify-end text-gray-300 my-2'>
                     {project.tags.map((tag) => (
-                      <h1 className='px-2 text-pink-600'>{tag}</h1>
+                      <h1 key={tag} className='px-2 text-pink-600'>
+                        {tag}
+                      </h1>
                     ))}
                   </div>
                   <div className='flex justify-end  text-white'>

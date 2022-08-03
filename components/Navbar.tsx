@@ -88,7 +88,7 @@ export default function Example() {
             </div>
             <div className='my-4'>
               <p className='text-white '>
-                Let's build something legendary together!
+                Let&apos;s build something legendary together!
               </p>
             </div>
           </div>
@@ -122,7 +122,7 @@ export default function Example() {
             </ul>
             <div className='absolute bottom-5'>
               <p className='uppercase -tracking-wider text-white'>
-                Let's connect
+                Let&apos;s connect
               </p>
               <div className='flex items-center gap-10 my-4 w-full sm:w-[80%]'>
                 <div className='rounded-full shadow-lg shadow-teal p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
