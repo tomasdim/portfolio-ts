@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
+import AboutMe from '../components/AboutMe';
 import Contact from '../components/Contact';
 import Main from '../components/Main';
 import Navbar from '../components/Navbar';
@@ -12,6 +13,7 @@ const Home: NextPage = () => {
     <div className='max-w-screen max-h-screen'>
       <Navbar />
       <Main />
+      <AboutMe />
       <Skills />
       <Projects />
       <Contact />
