@@ -27,9 +27,9 @@ const AboutMe = () => {
             some HTML & CSS!
           </div>
           <div className=' text-lg m-4'>
-            Since then I've shared the passion for sports and literature with
-            Web Development. My main focus these days is building accessible,
-            inclusive products and digital experiences.
+            Since then I&apos;ve shared the passion for sports and literature
+            with Web Development. My main focus these days is building
+            accessible, inclusive products and digital experiences.
           </div>
           <div className=' text-lg m-4'>
             Here are a few technologies I&apos;ve been working with recently:
@@ -37,7 +37,7 @@ const AboutMe = () => {
 
           <div className='grid grid-cols-2 max-w-md m-4'>
             {skills.map((skill) => (
-              <div className='flex items-center'>
+              <div key={skill} className='flex items-center'>
                 <RightArrow className='h-3 w-3 text-teal mr-2' />
                 {skill}
               </div>

@@ -9,18 +9,18 @@ export default function Example() {
   const handleNav = () => {
     setOpenNav(!openNav);
   };
-
-  var prevScrollpos = window.pageYOffset;
-  window.onscroll = function () {
-    var currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
-      setHideNav(false);
-    } else {
-      setHideNav(true);
-    }
-    prevScrollpos = currentScrollPos;
-  };
-
+  if (typeof window !== 'undefined') {
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function () {
+      var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        setHideNav(false);
+      } else {
+        setHideNav(true);
+      }
+      prevScrollpos = currentScrollPos;
+    };
+  }
   return (
     <div
       className={
