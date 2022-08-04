@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 .jello-vertical:hover {
   -webkit-animation: jello-vertical 0.9s both;
   animation: jello-vertical 0.9s both;

@@ -25,7 +25,7 @@ Material UI for some material components.`,
 
 const Projects = () => {
   return (
-    <div className='w-full px-4 sm:px-40 pb-20'>
+    <div id='projects' className='w-full px-4 sm:px-40 pb-20'>
       <div className='max-w-[1240px] mx-auto flex flex-col h-full'>
         <div className='text-xl flex tracking-widest uppercase text-white'>
           <p className='text-teal mr-2 mb-5'>02.</p> Projects
@@ -34,7 +34,10 @@ const Projects = () => {
         {ProjectsInfo.map((project) => {
           if (project.id % 2 == 0)
             return (
-              <div className='grid grid-cols-1 lg:grid-cols-2 sm:my-20'>
+              <div
+                key={project.id}
+                className='grid grid-cols-1 lg:grid-cols-2 sm:my-20'
+              >
                 <div className='flex my-8 flex-col justify-around sm:ml-10 text-left'>
                   <h1 className='text-teal text-2xl my-2'>{project.title}</h1>
                   <div className='rounded shadow-md  bg-gray-300 p-5'>
@@ -42,7 +45,7 @@ const Projects = () => {
                       {project.description}
                     </h2>
                   </div>
-                  <div className='flex text-left text-gray-300 my-2'>
+                  <div className='flex flex-wrap text-left text-gray-300 my-2'>
                     {project.tags.map((tag) => (
                       <h1 key={tag} className='px-2 text-pink-600 '>
                         {tag}
@@ -66,7 +69,7 @@ const Projects = () => {
                     </div>
                   </div>
                 </div>
-                <div className='hidden sm:block w-full h-80 ml-4 mt-2 border rounded overflow-hidden'>
+                <div className='hidden sm:block w-full h-80 ml-4 my-8 border rounded overflow-hidden'>
                   <div className='h-5 bg-gray-200 flex items-center sticky z-10'>
                     <div className='h-2 w-2 rounded-md m-2 bg-red-600'></div>
                     <div className='h-2 w-2 rounded-md m-2 bg-yellow-500'></div>
@@ -83,7 +86,7 @@ const Projects = () => {
             );
           else
             return (
-              <div className='grid grid-cols-1 lg:grid-cols-2'>
+              <div key={project.id} className='grid grid-cols-1 lg:grid-cols-2'>
                 <div className='hidden sm:block w-full h-80 ml-4 my-8 border rounded overflow-hidden'>
                   <div className='h-5 bg-gray-200 flex items-center sticky z-10'>
                     <div className='h-2 w-2 rounded-md m-2 bg-red-600'></div>
@@ -104,7 +107,7 @@ const Projects = () => {
                       {project.description}
                     </h2>
                   </div>
-                  <div className='flex text-right justify-end text-gray-300 my-2'>
+                  <div className='flex flex-wrap  text-right justify-end text-gray-300 my-2'>
                     {project.tags.map((tag) => (
                       <h1 key={tag} className='px-2 text-pink-600'>
                         {tag}

@@ -15,7 +15,7 @@ const skills = [
 
 const Skills = () => {
   return (
-    <div className='w-full p-2 pb-20'>
+    <div id='skills' className='w-full p-2 pb-20'>
       <div className='max-w-[1240px] mx-auto flex flex-col h-full'>
         <div className='flex text-xl tracking-widest uppercase text-white'>
           <p className='text-teal mr-2'>01.</p>Skills

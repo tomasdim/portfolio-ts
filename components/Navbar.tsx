@@ -3,18 +3,6 @@ import Link from 'next/link';
 import { CloseIcon, IconGithub, LinkedInIcon, MenuIcon } from './icons';
 import { useState } from 'react';
 
-const navigation = [
-  { name: 'Homepage', href: '#', current: true },
-  { name: 'About Me', href: '#', current: false },
-  { name: 'Services', href: '#', current: false },
-  { name: 'Works', href: '#', current: false },
-  { name: 'Contact', href: '#', current: false },
-];
-
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ');
-}
-
 export default function Example() {
   const [openNav, setOpenNav] = useState(false);
   const handleNav = () => {
@@ -27,27 +15,27 @@ export default function Example() {
           <img className='h-10' src='/img/logotdlong.png'></img>
         </div>
         <ul className='hidden md:flex'>
-          <Link href='/'>
+          <Link href='/#home'>
             <li className='ml-10 text-white hover:text-teal text-sm  ease-in duration-500 cursor-pointer uppercase '>
               Home
             </li>
           </Link>
-          <Link href='/'>
+          <Link href='/#about'>
             <li className='ml-10 text-white hover:text-teal text-sm  ease-in duration-500 cursor-pointer uppercase  '>
               About
             </li>
           </Link>
-          <Link href='/'>
+          <Link href='/#skills'>
             <li className='ml-10 text-white hover:text-teal text-sm  ease-in duration-500 cursor-pointer uppercase  '>
               Skills
             </li>
           </Link>
-          <Link href='/'>
+          <Link href='/#projects'>
             <li className='ml-10 text-white hover:text-teal text-sm  ease-in duration-500 cursor-pointer uppercase  '>
               Project
             </li>
           </Link>
-          <Link href='/'>
+          <Link href='/#contact'>
             <li className='ml-10 text-white hover:text-teal  ease-in duration-500 cursor-pointer text-sm uppercase  '>
               Contact
             </li>
@@ -94,30 +82,32 @@ export default function Example() {
           </div>
           <div className='py-4 flex flex-col'>
             <ul className='flex-col uppercase'>
-              <Link href='/'>
+              <Link href='/#home'>
                 <li className='mb-3 text-white py-4 text-sm hover:text-teal hover:text-lg ease-in duration-500 cursor-pointer'>
                   Home
                 </li>
               </Link>
-              <Link href='/'>
+              <Link href='/#about'>
                 <li className='mb-3 text-white py-4 text-sm hover:text-teal hover:text-lg ease-in duration-500 cursor-pointer'>
                   About
                 </li>
               </Link>
-              <Link href='/'>
+              <Link href='/#skills'>
                 <li className='mb-3 text-white py-4 text-sm hover:text-teal hover:text-lg ease-in duration-500 cursor-pointer'>
                   Skills
                 </li>
               </Link>
-              <Link href='/'>
+              <Link href='/#projects'>
                 <li className='mb-3 text-white py-4 text-sm hover:text-teal hover:text-lg ease-in duration-500 cursor-pointer'>
                   Project
                 </li>
               </Link>
-              <Link href='/'>
-                <li className='mb-3 text-white py-4 text-sm hover:text-teal hover:text-lg ease-in duration-500 cursor-pointer'>
-                  Contact
-                </li>
+              <Link href='/#contact'>
+                <a>
+                  <li className='mb-3 text-white py-4 text-sm hover:text-teal hover:text-lg ease-in duration-500 cursor-pointer'>
+                    Contact
+                  </li>
+                </a>
               </Link>
             </ul>
             <div className='absolute bottom-5'>

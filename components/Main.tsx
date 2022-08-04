@@ -3,7 +3,7 @@ import { IconGithub, LinkedInIcon } from './icons';
 
 const Main = () => {
   return (
-    <div className='w-full h-screen text-center'>
+    <div id='home' className='w-full h-screen text-center'>
       <div className='max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center'>
         <div>
           <h1 className='flex text-6xl text-center content-center justify-center'>
