@@ -14,7 +14,7 @@ const AboutMe = () => {
   return (
     <div id='about' className='w-full p-2 pb-20'>
       <div className='max-w-[1240px] mx-auto flex flex-col h-full'>
-        <div className='flex text-xl tracking-widest uppercase text-white'>
+        <div className='flex text-xl tracking-widest uppercase text-white md:ml-[170px]'>
           <p className='text-teal mr-2'>00.</p>About Me
         </div>
       </div>

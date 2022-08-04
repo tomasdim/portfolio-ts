@@ -14,31 +14,51 @@ export default function Example() {
         <div className='flex items-center justify-center'>
           <img className='h-10' src='/img/logotdlong.png'></img>
         </div>
-        <ul className='hidden md:flex'>
+        <ul className='hidden md:flex mr-5'>
           <Link href='/#home'>
-            <li className='ml-10 text-white hover:text-teal text-sm  ease-in duration-500 cursor-pointer uppercase '>
-              Home
-            </li>
+            <div className='flex ml-10 cursor-pointer'>
+              <p className='text-teal text-sm '>00.</p>
+              <div className='mx-1'></div>
+              <li className=' text-white hover:text-teal text-sm  ease-in duration-500  uppercase '>
+                Home
+              </li>
+            </div>
           </Link>
           <Link href='/#about'>
-            <li className='ml-10 text-white hover:text-teal text-sm  ease-in duration-500 cursor-pointer uppercase  '>
-              About
-            </li>
+            <div className='flex ml-10 cursor-pointer'>
+              <p className='text-teal text-sm '>01.</p>
+              <div className='mx-1'></div>
+              <li className=' text-white hover:text-teal text-sm  ease-in duration-500  uppercase '>
+                About
+              </li>
+            </div>
           </Link>
           <Link href='/#skills'>
-            <li className='ml-10 text-white hover:text-teal text-sm  ease-in duration-500 cursor-pointer uppercase  '>
-              Skills
-            </li>
+            <div className='flex ml-10 cursor-pointer'>
+              <p className='text-teal text-sm '>02.</p>
+              <div className='mx-1'></div>
+              <li className=' text-white hover:text-teal text-sm  ease-in duration-500  uppercase '>
+                Skills
+              </li>
+            </div>
           </Link>
           <Link href='/#projects'>
-            <li className='ml-10 text-white hover:text-teal text-sm  ease-in duration-500 cursor-pointer uppercase  '>
-              Project
-            </li>
+            <div className='flex ml-10 cursor-pointer'>
+              <p className='text-teal text-sm '>03.</p>
+              <div className='mx-1'></div>
+              <li className=' text-white hover:text-teal text-sm  ease-in duration-500  uppercase '>
+                Projects
+              </li>
+            </div>
           </Link>
           <Link href='/#contact'>
-            <li className='ml-10 text-white hover:text-teal  ease-in duration-500 cursor-pointer text-sm uppercase  '>
-              Contact
-            </li>
+            <div className='flex ml-10 cursor-pointer'>
+              <p className='text-teal text-sm '>04.</p>
+              <div className='mx-1'></div>
+              <li className=' text-white hover:text-teal text-sm  ease-in duration-500  uppercase '>
+                Contact
+              </li>
+            </div>
           </Link>
         </ul>
         <div onClick={handleNav} className='md:hidden'>
@@ -69,7 +89,7 @@ export default function Example() {
               ></img>
               <div
                 onClick={handleNav}
-                className='rounded-full shadow-lg shadow-pink-600 p-3 cursor-pointer'
+                className='rounded-full shadow shadow-pink-600 p-3 cursor-pointer'
               >
                 <CloseIcon />
               </div>
@@ -115,11 +135,11 @@ export default function Example() {
                 Let&apos;s connect
               </p>
               <div className='flex items-center gap-10 my-4 w-full sm:w-[80%]'>
-                <div className='rounded-full shadow-lg shadow-teal p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                  <LinkedInIcon />
+                <div className='rounded-full shadow shadow-teal p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
+                  <LinkedInIcon className='text-white h-10 w-10' />
                 </div>
-                <div className='rounded-full shadow-lg shadow-teal p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                  <IconGithub />
+                <div className='rounded-full shadow shadow-teal p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
+                  <IconGithub className='text-white' />
                 </div>
               </div>
             </div>

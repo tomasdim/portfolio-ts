@@ -45,7 +45,7 @@ const Contact = () => {
   };
 
   return (
-    <div>
+    <div className='sm:px-[217px]'>
       <div className='max-w-[1240px] mx-auto flex p-2'>
         <div className='flex text-xl tracking-widest uppercase text-white'>
           <p id='contact' className='text-teal mr-2'>

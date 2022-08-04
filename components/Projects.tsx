@@ -25,7 +25,7 @@ Material UI for some material components.`,
 
 const Projects = () => {
   return (
-    <div id='projects' className='w-full px-4 sm:px-40 pb-20'>
+    <div id='projects' className='w-full px-4 md:px-[217px] pb-20'>
       <div className='max-w-[1240px] mx-auto flex flex-col h-full'>
         <div className='text-xl flex tracking-widest uppercase text-white'>
           <p className='text-teal mr-2 mb-5'>02.</p> Projects
@@ -56,14 +56,14 @@ const Projects = () => {
                     <div className='mx-2'>
                       <Link href='https://www.github.com'>
                         <a target='_blank' rel='noopener noreferrer'>
-                          <IconGithub className='hover:text-teal h-8 w-8' />
+                          <IconGithub className='hover:text-teal h-8 w-8 ease-in duration-300' />
                         </a>
                       </Link>
                     </div>
                     <div className='mx-2 mt-0.5'>
                       <Link href='https://www.google.com'>
                         <a target='_blank' rel='noopener noreferrer'>
-                          <OpenTab className='hover:text-teal h-7 w-7' />
+                          <OpenTab className='hover:text-teal h-7 w-7 ease-in duration-300' />
                         </a>
                       </Link>
                     </div>
@@ -118,14 +118,14 @@ const Projects = () => {
                     <div className='mx-2'>
                       <Link href='https://www.github.com'>
                         <a target='_blank' rel='noopener noreferrer'>
-                          <IconGithub className='hover:text-teal h-8 w-8' />
+                          <IconGithub className='hover:text-teal h-8 w-8 ease-in duration-300' />
                         </a>
                       </Link>
                     </div>
                     <div className='mx-2 mt-0.5'>
                       <Link href='https://www.google.com'>
                         <a target='_blank' rel='noopener noreferrer'>
-                          <OpenTab className='hover:text-teal h-7 w-7' />
+                          <OpenTab className='hover:text-teal h-7 w-7 ease-in duration-300' />
                         </a>
                       </Link>
                     </div>

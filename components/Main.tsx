@@ -34,13 +34,14 @@ const Main = () => {
           <p className='uppercase text-sm tracking-widest text-teal'>
             Let&apos;s make something special
           </p>
-          <div className='flex items-center lg:mt-5 justify-between max-w-xs md:max-w-sm  m-auto py-4'>
-            <div className='rounded-full shadow shadow-pink-600 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
+          <div className='flex items-center lg:mt-5 justify-center max-w-xs md:max-w-sm  m-auto py-4'>
+            <div className='mouse'></div>
+            {/* <div className='rounded-full shadow shadow-pink-600 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
               <LinkedInIcon />
             </div>
             <div className='rounded-full shadow shadow-pink-600 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
               <IconGithub className='text-white' />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
