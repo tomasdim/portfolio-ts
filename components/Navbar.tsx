@@ -5,14 +5,33 @@ import { useState } from 'react';
 
 export default function Example() {
   const [openNav, setOpenNav] = useState(false);
+  const [hideNav, setHideNav] = useState(false);
   const handleNav = () => {
     setOpenNav(!openNav);
   };
+
+  var prevScrollpos = window.pageYOffset;
+  window.onscroll = function () {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      setHideNav(false);
+    } else {
+      setHideNav(true);
+    }
+    prevScrollpos = currentScrollPos;
+  };
+
   return (
-    <div className='fixed w-full h-20 shadow-xl z-20 bg-[#1d1d1d] bg-opacity-70'>
+    <div
+      className={
+        hideNav
+          ? `-top-[100px] ease-in duration-500 fixed w-full h-20 shadow-xl z-20 bg-[#1d1d1d] bg-opacity-70`
+          : `ease-in duration-500 top-0 fixed w-full h-20 shadow-xl z-20 bg-[#1d1d1d] bg-opacity-70`
+      }
+    >
       <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
         <div className='flex items-center justify-center'>
-          <img className='h-10' src='/img/logotdlong.png'></img>
+          <img className='h-10' src='/img/logotduni.png'></img>
         </div>
         <ul className='hidden md:flex mr-5'>
           <Link href='/#home'>
@@ -85,7 +104,7 @@ export default function Example() {
             <div className='flex w-full items-center justify-between'>
               <img
                 className='w-[150px] mr-5  sm:h-10 sm:w-auto'
-                src='/img/logotdlong.png'
+                src='/img/logotduni.png'
               ></img>
               <div
                 onClick={handleNav}

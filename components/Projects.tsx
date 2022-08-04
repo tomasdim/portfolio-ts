@@ -28,7 +28,7 @@ const Projects = () => {
     <div id='projects' className='w-full px-4 md:px-[217px] pb-20'>
       <div className='max-w-[1240px] mx-auto flex flex-col h-full'>
         <div className='text-xl flex tracking-widest uppercase text-white'>
-          <p className='text-teal mr-2 mb-5'>02.</p> Projects
+          <p className='text-teal mr-2 mb-5'>03.</p> Projects
         </div>
 
         {ProjectsInfo.map((project) => {

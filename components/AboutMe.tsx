@@ -15,7 +15,7 @@ const AboutMe = () => {
     <div id='about' className='w-full p-2 pb-20'>
       <div className='max-w-[1240px] mx-auto flex flex-col h-full'>
         <div className='flex text-xl tracking-widest uppercase text-white md:ml-[170px]'>
-          <p className='text-teal mr-2'>00.</p>About Me
+          <p className='text-teal mr-2'>01.</p>About Me
         </div>
       </div>
       <div className='my-4 max-w-[1240px] grid-cols-1 grid md:grid-cols-5'>
