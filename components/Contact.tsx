@@ -1,15 +1,32 @@
 import React from 'react';
 import emailjs from '@emailjs/browser';
-import { useState } from 'react';
+import { useRef, useEffect, useState } from 'react';
 
 const Contact = () => {
+  //Lazy Loading
+  const contactRef = useRef() as React.MutableRefObject<HTMLInputElement>;
+  const [contactIsVisible, setContactIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          entry.target.classList.toggle('animateMain', entry.isIntersecting);
+          if (entry.isIntersecting) observer.unobserve(entry.target);
+        });
+        const entry = entries[0];
+        setContactIsVisible(entry.isIntersecting);
+      },
+      {
+        rootMargin: '-300px',
+      }
+    );
+    observer.observe(contactRef.current);
+  }, []);
+
+  //Form Button
   const [loading, setLoading] = useState(false);
   const [loadingMessage, setLoadingMessage] = useState('Sending...');
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [subject, setSubject] = useState('');
-  const [message, setMessage] = useState('');
-
   function setFalse() {
     setLoading(false);
   }
@@ -19,6 +36,13 @@ const Contact = () => {
     setTimeout(setFalse, 3000);
   };
 
+  //Form values
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [subject, setSubject] = useState('');
+  const [message, setMessage] = useState('');
+
+  //Send Email function
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
@@ -45,7 +69,7 @@ const Contact = () => {
   };
 
   return (
-    <div className='sm:px-[217px]'>
+    <div ref={contactRef} className='opacity-0 sm:px-[217px]'>
       <div className='max-w-[1240px] mx-auto flex p-2'>
         <div className='flex text-xl tracking-widest uppercase text-white'>
           <p id='contact' className='text-teal mr-2'>

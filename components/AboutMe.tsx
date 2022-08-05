@@ -1,5 +1,6 @@
 import React from 'react';
 import { RightArrow } from './icons';
+import { useRef, useEffect, useState } from 'react';
 
 const skills = [
   'NextJS',
@@ -11,8 +12,29 @@ const skills = [
 ];
 
 const AboutMe = () => {
+  //Lazy Loading
+  const aboutRef = useRef() as React.MutableRefObject<HTMLInputElement>;
+  const [aboutIsVisible, setAboutIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          entry.target.classList.toggle('animateMain', entry.isIntersecting);
+          if (entry.isIntersecting) observer.unobserve(entry.target);
+        });
+        const entry = entries[0];
+        setAboutIsVisible(entry.isIntersecting);
+      },
+      {
+        rootMargin: '-300px',
+      }
+    );
+    observer.observe(aboutRef.current);
+  }, []);
+
   return (
-    <div id='about' className='w-full p-2 pb-20'>
+    <div ref={aboutRef} id='about' className='opacity-0 w-full p-2 pb-20'>
       <div className='max-w-[1240px] mx-auto flex flex-col h-full'>
         <div className='flex text-xl tracking-widest uppercase text-white md:ml-[170px]'>
           <p className='text-teal mr-2'>01.</p>About Me
@@ -45,15 +67,8 @@ const AboutMe = () => {
           </div>
         </div>
         <div className='my-4 md:col-span-2 flex justify-center items-center md:mr-5 md:mb-52'>
-          {/* <div className='my-4 col-span-2 ml-5'>
-          <img className='flex rounded w-[350px]' src='/img/cv.jpg'></img>
-          <div className='relative -top-72 hover:bg-opacity-0 ease-in duration-300 bg-opacity-40 imagen rounded w-[350px] h-[350px] bg-teal z-30'></div>
-        </div> */}
-          {/* image */}
           <div className='relative w-72'>
-            {/* image__img */}
             <img className='rounded block w-full' src='/img/cv.jpg'></img>
-            {/* image__overlay */}
             <div className=' rounded absolute top-0 left-0 w-full h-full bg-teal bg-opacity-30 hover:bg-opacity-0 ease-in duration-300'></div>
           </div>
         </div>

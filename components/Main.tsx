@@ -1,9 +1,28 @@
 import React from 'react';
-import { IconGithub, LinkedInIcon } from './icons';
+import { useRef, useEffect, useState } from 'react';
 
 const Main = () => {
+  //Lazy Loading
+  const mainRef = useRef() as React.MutableRefObject<HTMLInputElement>;
+  const [mainIsVisible, setMainIsVisible] = useState(false);
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        entry.target.classList.toggle('animateMain', entry.isIntersecting);
+        if (entry.isIntersecting) observer.unobserve(entry.target);
+      });
+      const entry = entries[0];
+      setMainIsVisible(entry.isIntersecting);
+    });
+    observer.observe(mainRef.current!);
+  }, []);
+
   return (
-    <div id='home' className='w-full h-screen text-center'>
+    <div
+      ref={mainRef}
+      id='home'
+      className='opacity-0 w-full h-screen text-center'
+    >
       <div className='max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center'>
         <div>
           <h1 className='flex text-6xl text-center content-center justify-center'>

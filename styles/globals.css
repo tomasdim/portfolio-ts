@@ -163,3 +163,21 @@ html {
     top: 60px;
   }
 }
+
+.animateMain {
+  opacity: 100%;
+  transition: ease-in;
+  animation-duration: 1s;
+  animation-name: animate-element;
+}
+
+@keyframes animate-element {
+  0% {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  100% {
+    opacity: 100;
+    transform: translateY(0px);
+  }
+}

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 import { IconGithub, OpenTab } from './icons';
+import { useRef, useEffect, useState } from 'react';
 
 const ProjectsInfo = [
   {
@@ -24,8 +25,33 @@ Material UI for some material components.`,
 ];
 
 const Projects = () => {
+  //Lazy Loading
+  const projectsRef = useRef() as React.MutableRefObject<HTMLInputElement>;
+  const [projectsIsVisible, setProjectsIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          entry.target.classList.toggle('animateMain', entry.isIntersecting);
+          if (entry.isIntersecting) observer.unobserve(entry.target);
+        });
+        const entry = entries[0];
+        setProjectsIsVisible(entry.isIntersecting);
+      },
+      {
+        rootMargin: '-300px',
+      }
+    );
+    observer.observe(projectsRef.current);
+  }, []);
+
   return (
-    <div id='projects' className='w-full px-4 md:px-[217px] pb-20'>
+    <div
+      ref={projectsRef}
+      id='projects'
+      className='opacity-0 w-full px-4 md:px-[217px] pb-20'
+    >
       <div className='max-w-[1240px] mx-auto flex flex-col h-full'>
         <div className='text-xl flex tracking-widest uppercase text-white'>
           <p className='text-teal mr-2 mb-5'>03.</p> Projects

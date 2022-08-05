@@ -1,4 +1,5 @@
 import React from 'react';
+import { useRef, useEffect, useState } from 'react';
 
 const skills = [
   { name: 'HTML', img: '/img/skills/html.png' },
@@ -14,8 +15,33 @@ const skills = [
 ];
 
 const Skills = () => {
+  //Lazy Loading
+  const skillsRef = useRef() as React.MutableRefObject<HTMLInputElement>;
+  const [skillsIsVisible, setSkillsIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          entry.target.classList.toggle('animateMain', entry.isIntersecting);
+          if (entry.isIntersecting) observer.unobserve(entry.target);
+        });
+        const entry = entries[0];
+        setSkillsIsVisible(entry.isIntersecting);
+      },
+      {
+        rootMargin: '-300px',
+      }
+    );
+    observer.observe(skillsRef.current);
+  }, []);
+
   return (
-    <div id='skills' className='w-full px-2 md:px-[217px] pb-20'>
+    <div
+      ref={skillsRef}
+      id='skills'
+      className='opacity-0 w-full px-2 md:px-[217px] pb-20'
+    >
       <div className='max-w-[1240px] mx-auto flex flex-col h-full'>
         <div className='flex text-xl tracking-widest uppercase text-white'>
           <p className='text-teal mr-2'>02.</p>Skills
