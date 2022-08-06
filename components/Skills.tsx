@@ -30,7 +30,7 @@ const Skills = () => {
         setSkillsIsVisible(entry.isIntersecting);
       },
       {
-        rootMargin: '-300px',
+        threshold: 0.2,
       }
     );
     observer.observe(skillsRef.current);

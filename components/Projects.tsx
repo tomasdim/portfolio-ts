@@ -11,6 +11,8 @@ const ProjectsInfo = [
     tags: ['NextJS', 'Tailwind', 'NodeJS', 'MongoDB', 'TypeScript'],
     img: 'https://imgur.com/VNsojy9.png',
     translate: 'hover:-translate-y-[1130px] duration-[8000ms]',
+    github: 'https://github.com/tomasdim/portfolio-ts',
+    live: 'https://cash-ts.vercel.app/',
   },
   {
     id: 2,
@@ -19,6 +21,8 @@ const ProjectsInfo = [
     tags: ['React', 'CSS', 'Material UI'],
     img: 'https://imgur.com/psZlUox.png',
     translate: 'hover:-translate-y-[450px] duration-[4000ms]',
+    github: 'https://github.com/tomasdim/Buller-maqueta',
+    live: 'https://tomasdim.github.io/Buller-maqueta/',
   },
   {
     id: 3,
@@ -28,6 +32,8 @@ const ProjectsInfo = [
     tags: ['NodeJS', 'Socket.io', 'Express', 'CSS'],
     img: 'https://imgur.com/fVccCDI.png',
     translate: 'hover:-translate-y-[200px] duration-[3000ms]',
+    github: 'https://github.com/tomasdim/chat-app',
+    live: 'https://tomasdim-chat-app.herokuapp.com/',
   },
   {
     id: 4,
@@ -38,6 +44,8 @@ Material UI for some material components.`,
     tags: ['React', 'CSS', 'Material UI'],
     img: 'https://imgur.com/XEYFnrB.png',
     translate: 'hover:-translate-y-[1150px] duration-[8000ms]',
+    github: 'https://github.com/tomasdim/Portfolio',
+    live: 'https://tomasdim.github.io/Portfolio/',
   },
 ];
 
@@ -49,6 +57,8 @@ const MoreprojectsInfo = [
     tags: ['JavaScript', 'React', 'Styled Components'],
     img: 'https://imgur.com/RYaTXfO.png',
     translate: '',
+    github: 'https://github.com/tomasdim/tetris-app/tree/master',
+    live: 'https://tomasdim.github.io/tetris-app/',
   },
   {
     id: 2,
@@ -57,6 +67,8 @@ const MoreprojectsInfo = [
     tags: ['React', 'CSS', 'API'],
     img: 'https://imgur.com/M6VKv6L.png',
     translate: '',
+    github: 'https://github.com/tomasdim/weather-finder/tree/master',
+    live: 'https://tomasdim.github.io/weather-finder/',
   },
   {
     id: 3,
@@ -65,6 +77,8 @@ const MoreprojectsInfo = [
     tags: ['JavaScript', 'React', 'API'],
     img: 'https://imgur.com/6C1LQO5.png',
     translate: 'hover:-translate-y-[700px] duration-[4000ms]',
+    github: 'https://github.com/tomasdim/movie-center/tree/master',
+    live: 'https://tomasdim.github.io/movie-center/',
   },
 ];
 
@@ -90,7 +104,7 @@ const Projects = () => {
         setProjectsIsVisible(entry.isIntersecting);
       },
       {
-        rootMargin: '-300px',
+        threshold: 0.2,
       }
     );
     observer.observe(projectsRef.current);
@@ -130,14 +144,14 @@ const Projects = () => {
                   </div>
                   <div className='flex   text-white'>
                     <div className='mx-2'>
-                      <Link href='https://www.github.com'>
+                      <Link href={project.github}>
                         <a target='_blank' rel='noopener noreferrer'>
                           <IconGithub className='hover:text-teal h-8 w-8 ease-in duration-300' />
                         </a>
                       </Link>
                     </div>
                     <div className='mx-2 mt-0.5'>
-                      <Link href='https://www.google.com'>
+                      <Link href={project.live}>
                         <a target='_blank' rel='noopener noreferrer'>
                           <OpenTab className='hover:text-teal h-7 w-7 ease-in duration-300' />
                         </a>
@@ -192,14 +206,14 @@ const Projects = () => {
                   </div>
                   <div className='flex justify-end  text-white'>
                     <div className='mx-2'>
-                      <Link href='https://www.github.com'>
+                      <Link href={project.github}>
                         <a target='_blank' rel='noopener noreferrer'>
                           <IconGithub className='hover:text-teal h-8 w-8 ease-in duration-300' />
                         </a>
                       </Link>
                     </div>
                     <div className='mx-2 mt-0.5'>
-                      <Link href='https://www.google.com'>
+                      <Link href={project.live}>
                         <a target='_blank' rel='noopener noreferrer'>
                           <OpenTab className='hover:text-teal h-7 w-7 ease-in duration-300' />
                         </a>
@@ -246,14 +260,14 @@ const Projects = () => {
                       </div>
                       <div className='flex   text-white'>
                         <div className='mx-2'>
-                          <Link href='https://www.github.com'>
+                          <Link href={project.github}>
                             <a target='_blank' rel='noopener noreferrer'>
                               <IconGithub className='hover:text-teal h-8 w-8 ease-in duration-300' />
                             </a>
                           </Link>
                         </div>
                         <div className='mx-2 mt-0.5'>
-                          <Link href='https://www.google.com'>
+                          <Link href={project.live}>
                             <a target='_blank' rel='noopener noreferrer'>
                               <OpenTab className='hover:text-teal h-7 w-7 ease-in duration-300' />
                             </a>
@@ -313,14 +327,14 @@ const Projects = () => {
                       </div>
                       <div className='flex justify-end  text-white'>
                         <div className='mx-2'>
-                          <Link href='https://www.github.com'>
+                          <Link href={project.github}>
                             <a target='_blank' rel='noopener noreferrer'>
                               <IconGithub className='hover:text-teal h-8 w-8 ease-in duration-300' />
                             </a>
                           </Link>
                         </div>
                         <div className='mx-2 mt-0.5'>
-                          <Link href='https://www.google.com'>
+                          <Link href={project.live}>
                             <a target='_blank' rel='noopener noreferrer'>
                               <OpenTab className='hover:text-teal h-7 w-7 ease-in duration-300' />
                             </a>

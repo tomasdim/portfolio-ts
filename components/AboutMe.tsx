@@ -27,7 +27,7 @@ const AboutMe = () => {
         setAboutIsVisible(entry.isIntersecting);
       },
       {
-        rootMargin: '-300px',
+        threshold: 0.5,
       }
     );
     observer.observe(aboutRef.current);

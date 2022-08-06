@@ -155,10 +155,18 @@ export default function Example() {
               </p>
               <div className='flex items-center gap-10 my-4 w-full sm:w-[80%]'>
                 <div className='rounded-full shadow shadow-teal p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                  <LinkedInIcon className='text-white h-10 w-10' />
+                  <Link href='https://linkedin.com/in/tomasdim'>
+                    <a target='_blank' rel='noopener noreferrer'>
+                      <LinkedInIcon className='text-white h-10 w-10' />
+                    </a>
+                  </Link>
                 </div>
                 <div className='rounded-full shadow shadow-teal p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                  <IconGithub className='text-white' />
+                  <Link href='https://www.github.com/tomasdim'>
+                    <a target='_blank' rel='noopener noreferrer'>
+                      <IconGithub className='text-white' />
+                    </a>
+                  </Link>
                 </div>
               </div>
             </div>
