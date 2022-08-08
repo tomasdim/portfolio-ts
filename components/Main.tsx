@@ -47,7 +47,7 @@ const Main = () => {
               I&apos;m a Web Developer located in Argentina. I have a serious
               passion for creating intuitive, dynamic and enjoyable user
               experiences. Well organised person, problem solver, logic thinker.
-              Interested in the whole Front adn Back End spectrum.
+              Interested in the whole Front and Back End spectrum.
             </p>
           </div>
           <p className='uppercase text-sm tracking-widest text-teal'>
