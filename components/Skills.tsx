@@ -40,7 +40,7 @@ const Skills = () => {
     <div
       ref={skillsRef}
       id='skills'
-      className='opacity-0 w-full px-2 md:px-[217px] pb-20'
+      className='opacity-0 w-full px-2 md:px-[217px] pb-32'
     >
       <div className='max-w-[1240px] mx-auto flex flex-col h-full'>
         <div className='flex text-xl tracking-widest uppercase text-white'>

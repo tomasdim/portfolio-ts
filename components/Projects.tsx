@@ -114,7 +114,7 @@ const Projects = () => {
     <div
       ref={projectsRef}
       id='projects'
-      className='opacity-0 w-full px-4 md:px-[217px] pb-20'
+      className='opacity-0 w-full  md:px-[217px] pb-32'
     >
       <div className='max-w-[1240px] mx-auto flex flex-col h-full'>
         <div className='text-xl flex tracking-widest uppercase text-white'>

@@ -66,10 +66,16 @@ const AboutMe = () => {
             ))}
           </div>
         </div>
-        <div className='my-4 md:col-span-2 flex justify-center items-center md:mr-5 md:mb-52'>
-          <div className='relative w-72'>
-            <img className='rounded block w-full' src='/img/cv.jpg'></img>
-            <div className=' rounded absolute top-0 left-0 w-full h-full bg-teal bg-opacity-30 hover:bg-opacity-0 ease-in duration-300'></div>
+        <div className='my-4 md:col-span-2 flex justify-center  md:mr-5 '>
+          <div className='relative w-[288px] h-[229px]'>
+            <img
+              alt='headshot'
+              src='/img/cv.jpg'
+              className='rounded h-full w-full'
+            ></img>
+            <div className='absolute rounded top-0 right-0 left-0 bottom-0 bg-teal bg-opacity-30 duration-300 hover:bg-opacity-0 ease-in'>
+              <div className='content'></div>
+            </div>
           </div>
         </div>
       </div>

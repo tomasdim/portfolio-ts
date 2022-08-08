@@ -54,12 +54,8 @@ const Contact = () => {
         process.env.NEXT_PUBLIC_MAIL_PUBLIC_KEY
       )
       .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
+        (result) => {},
+        (error) => {}
       );
     timeoutfunction();
     setName('');
